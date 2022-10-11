@@ -1,13 +1,75 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .sidebar-icon {
+    @apply relative flex flex-col items-center justify-center
+            h-14 w-14 mt-2 mb-4 mx-auto shadow-lg
+            bg-gray-800 text-blue-500
+            hover:bg-blue-600 hover:text-white
+            rounded-3xl hover:rounded-xl
+            transition-all duration-300 ease-linear
+            cursor-pointer;
+  }
+  body {
+    @apply bg-gray-700;
+  }
+  .sidebar-tooltip {
+    @apply absolute w-auto p-3 m-3 min-w-max left-14
+    rounded-md shadow-md
+    text-white bg-gray-900 
+    text-xs font-bold
+    transition-all duration-100 scale-0 origin-left;
+  }
+  .sidebar-hr {
+    @apply bg-gray-800 h-1
+   border-gray-800 rounded-full
+    mx-2;
+  }
+  .content-container {
+    @apply flex flex-col h-full w-full 
+    bg-gray-700
+    overflow-hidden overflow-y-auto;
+  }
+
+  .title-text {
+    @apply text-2xl text-blue-500 tracking-wider font-semibold text-opacity-80 
+     ml-2 my-auto 
+    transition duration-300 ease-in-out;
+  }
+  .title-hashtag {
+    @apply text-xl text-blue-500 tracking-wider font-semibold text-opacity-80 
+    ml-2 my-auto 
+   transition duration-300 ease-in-out;
+  }
+  .logo {
+    @apply flex;
+  }
+  .top-nav {
+    @apply flex flex-row items-center justify-between
+    bg-gray-900 bg-opacity-95
+    w-full h-20
+    m-0 
+    shadow-xl;
+  }
+
+  .nav-icon {
+    @apply text-gray-500 text-opacity-90 cursor-pointer transition duration-300 ease-in-out 
+    hover:text-blue-400 mr-3 ml-4;
+  }
+  .icons {
+    @apply flex;
+  }
+  .content-list {
+    @apply flex flex-col items-center container 
+    h-full w-full mt-10 ml-10 mr-10 px-0 pb-12 text-white;
+  }
 }
