@@ -17,7 +17,7 @@ const Sidebar = () => {
       <hr className="sidebar-hr"></hr>
       <div className="sidebar-icon group">
         <HiOutlineCurrencyDollar size="32" />
-        <span className=" sidebar-tooltip group-hover:scale-100">Sales</span>
+        <span className="sidebar-tooltip group-hover:scale-100">Sales</span>
       </div>
       <div className="sidebar-icon group">
         <IoIosList size="30" />

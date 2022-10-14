@@ -22,8 +22,9 @@
   body {
     @apply bg-gray-700;
   }
+
   .sidebar-tooltip {
-    @apply absolute w-auto p-3 m-3 min-w-max left-14
+    @apply absolute w-auto p-3 m-3 min-w-max start-14
     rounded-md shadow-md
     text-white bg-gray-900 
     text-xs font-bold
@@ -42,12 +43,12 @@
 
   .title-text {
     @apply text-2xl text-blue-500 tracking-wider font-semibold text-opacity-80 
-     ml-2 my-auto 
+     me-2 my-auto 
     transition duration-300 ease-in-out;
   }
   .title-hashtag {
     @apply text-xl text-blue-500 tracking-wider font-semibold text-opacity-80 
-    ml-2 my-auto 
+    me-2 my-auto 
    transition duration-300 ease-in-out;
   }
   .logo {
@@ -63,13 +64,13 @@
 
   .nav-icon {
     @apply text-gray-500 text-opacity-90 cursor-pointer transition duration-300 ease-in-out 
-    hover:text-blue-400 mr-3 ml-4;
+    hover:text-blue-400 ms-3 me-4;
   }
   .icons {
     @apply flex;
   }
   .content-list {
     @apply flex flex-col items-center container 
-    h-full w-full mt-10 ml-10 mr-10 px-0 pb-12 text-white;
+    h-full w-full mt-10 me-10 ms-10 px-0 pb-12 text-white;
   }
 }
